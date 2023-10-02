@@ -8,25 +8,44 @@
 
     <TimePicker
         android:id="@+id/timepickerID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timepickerID"
+        android:layout_marginTop="20dp">
+
         <CheckBox
             android:id="@+id/repeatCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lặp lại"
-            android:layout_below="@+id/setAlarmButton"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:text="Lặp lại" />
 
         <Button
             android:id="@+id/setAlarmButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đặt báo thức"
-            android:layout_centerHorizontal="true"/>
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/repeatCheckbox"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="Đặt báo thức" />
+
+        <EditText
+            android:id="@+id/selectedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/setAlarmButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="Giờ đã chọn"/>
     </RelativeLayout>
 </RelativeLayout>
